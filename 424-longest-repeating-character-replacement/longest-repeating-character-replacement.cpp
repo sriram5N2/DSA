@@ -16,8 +16,9 @@ public:
                 mp[s[j]]--;
                 j++;
             }
-            ans=max(ans,i-j+1);
+           
             i++;
+             ans=max(ans,i-j);
         }
         return ans;
         

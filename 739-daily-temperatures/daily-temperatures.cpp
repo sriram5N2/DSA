@@ -7,12 +7,6 @@ public:
         st.push(n-1);
         for(int i=n-2;i>=0;i--)
         {
-            if(arr[st.top()]>arr[i])
-            {
-                ans[i]=st.top()-i;
-                
-            }
-            else{
             while(!st.empty()&&arr[i]>=arr[st.top()])
             {
                 st.pop();
@@ -21,8 +15,6 @@ public:
             ans[i]=0;
             else
             ans[i]=st.top()-i;
-            
-            }
            st.push(i);
             
         }
